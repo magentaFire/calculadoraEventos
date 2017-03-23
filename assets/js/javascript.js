@@ -1,3 +1,12 @@
+/*
+NOTA:
+mi calculadora funciona chistoso:
+- Al iniciar, necesariamente debe haber un número en el "display" de la calculadora.
+- Los botones de operaciones ignoran la primera vez que se presiona y sólo hacen la operación
+después
+- No restringe el input a números y operandos, por lo que hay un error si ingresa letras u otros caracteres
+*/
+
 
 //Definimos variables
 var num1 = 0;
@@ -112,7 +121,7 @@ var botonPorcentaje = function()
   {
     arrayOperacion.push(valorCaja);
     document.getElementById("cajaResultado").value = "";
-    porcentaje = (Number(arrayOperacion[0])*Number(arrayOperacion[1])) / 100;
+    porcentaje = (Number(arrayOperacion[0]) * Number(arrayOperacion[1])) / 100;
     arrayOperacion = [];
     arrayOperacion[0] = porcentaje;
 
