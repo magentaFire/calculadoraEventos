@@ -166,5 +166,5 @@ var botonPotencia = function()
 
 var botonIgual = function()
 {
-  document.getElementById("cajaResultado").value = arrayOperacion[0].toFixed(3);
+  document.getElementById("cajaResultado").value = arrayOperacion[0];
 }
