@@ -98,7 +98,73 @@ var botonDivision = function()
   }
 }
 
+var botonPorcentaje = function()
+{
+  var porcentaje = 0;
+  var valorCaja = document.getElementById("cajaResultado").value;
+  if (arrayOperacion[0] == undefined)
+  {
+    arrayOperacion[0] = valorCaja;
+    document.getElementById("cajaResultado").value = "";
+    console.log(arrayOperacion);
+  }
+  else
+  {
+    arrayOperacion.push(valorCaja);
+    document.getElementById("cajaResultado").value = "";
+    porcentaje = (Number(arrayOperacion[0])*Number(arrayOperacion[1])) / 100;
+    arrayOperacion = [];
+    arrayOperacion[0] = porcentaje;
+
+    console.log(arrayOperacion);
+  }
+}
+
+var botonModulo = function()
+{
+  var modulo = 0;
+  var valorCaja = document.getElementById("cajaResultado").value;
+  if (arrayOperacion[0] == undefined)
+  {
+    arrayOperacion[0] = valorCaja;
+    document.getElementById("cajaResultado").value = "";
+    console.log(arrayOperacion);
+  }
+  else
+  {
+    arrayOperacion.push(valorCaja);
+    document.getElementById("cajaResultado").value = "";
+    modulo = Number(arrayOperacion[0]) % Number(arrayOperacion[1]);
+    arrayOperacion = [];
+    arrayOperacion[0] = modulo;
+
+    console.log(arrayOperacion);
+  }
+}
+
+var botonPotencia = function()
+{
+  var potencia = 0;
+  var valorCaja = document.getElementById("cajaResultado").value;
+  if (arrayOperacion[0] == undefined)
+  {
+    arrayOperacion[0] = valorCaja;
+    document.getElementById("cajaResultado").value = "";
+    console.log(arrayOperacion);
+  }
+  else
+  {
+    arrayOperacion.push(valorCaja);
+    document.getElementById("cajaResultado").value = "";
+    potencia = Math.pow((arrayOperacion[0]), Number(arrayOperacion[1]));
+    arrayOperacion = [];
+    arrayOperacion[0] = potencia;
+
+    console.log(arrayOperacion);
+  }
+}
+
 var botonIgual = function()
 {
-  document.getElementById("cajaResultado").value = arrayOperacion[0];
+  document.getElementById("cajaResultado").value = arrayOperacion[0].toFixed(3);
 }
